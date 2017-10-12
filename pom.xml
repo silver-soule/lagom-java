@@ -23,6 +23,7 @@
                 <version>${lagom.version}</version>
                 <configuration>
                     <unmanagedServices>
+                       <github-external>https://api.github.com:443</github-external>
                         <cas_native>http://localhost:9042</cas_native>
                     </unmanagedServices>
                     <cassandraEnabled>false</cassandraEnabled>
