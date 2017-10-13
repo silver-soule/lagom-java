@@ -17,6 +17,8 @@ import org.junit.Test;
 
 import javax.inject.Inject;
 
+import java.util.Optional;
+
 import static bank.api.AccountService.ACCOUNT_CREATED_TOPIC;
 import static com.lightbend.lagom.javadsl.testkit.ServiceTest.*;
 import static org.junit.Assert.*;
@@ -46,6 +48,12 @@ public class BankConsumerServiceImplTest {
     static class AccountServiceStub implements AccountService {
         @Inject
         AccountServiceStub(ProducerStubFactory producerFactory){
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public ServiceCall<NotUsed, Optional<String>> getUserByCountry(String country) {
+            throw new UnsupportedOperationException();
         }
 
         @Override

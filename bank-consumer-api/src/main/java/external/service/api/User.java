@@ -1,7 +1,6 @@
 package external.service.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.annotation.concurrent.Immutable;
 
 @Immutable
@@ -31,13 +30,6 @@ public class User {
     @JsonProperty("public_repos")
     public int getPublicRepos() {
         return publicRepos;
-    }
-
-    public User(String userName, String name, int followers, int publicRepos){
-        this.followers = followers;
-        this.name = name;
-        this.userName = userName;
-        this.publicRepos = publicRepos;
     }
 
 
