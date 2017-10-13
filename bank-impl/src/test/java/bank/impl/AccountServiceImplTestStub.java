@@ -52,22 +52,16 @@ public class AccountServiceImplTestStub {
 
         @Override
         public ServiceCall<Integer, Done> updateBalance(String id) {
-            Map<String, String> response = new HashMap<>();
-            response.put("success", "Done");
             return request -> CompletableFuture.completedFuture(Done.getInstance());
         }
 
         @Override
         public ServiceCall<Account, Done> createAccount() {
-            Map<String, String> response = new HashMap<>();
-            response.put("success", "created user");
             return returnrequest -> CompletableFuture.completedFuture(Done.getInstance());
         }
 
         @Override
         public ServiceCall<NotUsed, Integer> getAccountBalance(String id) {
-            Map<String, String> response = new HashMap<>();
-            response.put("success", "100");
             return returnrequest -> CompletableFuture.completedFuture(Integer.valueOf(22));
         }
 
